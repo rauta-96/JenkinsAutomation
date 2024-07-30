@@ -2,24 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('First') {
+        stage('mvn 3.9.6') {
             steps {
-                echo "This is 1st stage"
+                echo "Version Checked"
             }
         }
-        stage('Second') {
+        stage('mvn Install') {
             steps {
-                echo "This is 2nd stage"
+                echo "mvn installation done"
             }
         }
-        stage('Third') {
+        stage('package') {
             steps {
-                echo "This is 3rd stage"
-            }
-        }
-        stage('Fourth') {
-            steps {
-                echo "This is 4th stage"
+                echo "packages installation"
             }
         }
     }
